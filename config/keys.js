@@ -1,2 +1,5 @@
-module.exports = { mongoURI: "mongodb+srv://Devadmin:Password123@devconnector-fh3lv.mongodb.net/test?retryWrites=true&w=majority"}
+module.exports = { 
+  mongoURI: `mongodb+srv://Admin:${encodeURIComponent('kalteam4')}@instacluster-5aexv.mongodb.net/test?retryWrites=true&w=majority`,
+  secretOrKey: 'team4'
+}
 

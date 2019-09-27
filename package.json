@@ -4,8 +4,8 @@
   "description": "Social Media networking site",
   "main": "server.js",
   "scripts": {
-    "start":"node server.js",
-    "serve":"nodemon server.js"
+    "start": "node server.js",
+    "serve": "nodemon server.js"
   },
   "author": "Keertana nandyala",
   "license": "ISC",
