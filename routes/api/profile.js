@@ -115,6 +115,7 @@ router.post(
     if (req.body.handle) profileFields.handle = req.body.handle;
     if (req.body.location) profileFields.location = req.body.location; 
     if (req.body.status) profileFields.status = req.body.status;
+    if(req.body.bio) profileFields.bio = req.body.bio;
 
     // Social
     profileFields.social = {};

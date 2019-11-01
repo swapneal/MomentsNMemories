@@ -18,13 +18,10 @@ class CreateProfile extends Component {
       location: '',
       status: '',
  //     skills: '',
-      githubusername: '',
       bio: '',
       twitter: '',
       facebook: '',
-      linkedin: '',
       youtube: '',
-      instagram: '',
       errors: {}
     };
 
@@ -47,13 +44,10 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
  //     skills: this.state.skills,
-      githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
-      linkedin: this.state.linkedin,
-      youtube: this.state.youtube,
-      instagram: this.state.instagram
+      youtube: this.state.youtube
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -89,14 +83,6 @@ class CreateProfile extends Component {
             error={errors.facebook}
           />
 
-          <InputGroup
-            placeholder="Linkedin Profile URL"
-            name="linkedin"
-            icon="fab fa-linkedin"
-            value={this.state.linkedin}
-            onChange={this.onChange}
-            error={errors.linkedin}
-          />
 
           <InputGroup
             placeholder="YouTube Channel URL"
@@ -107,14 +93,6 @@ class CreateProfile extends Component {
             error={errors.youtube}
           />
 
-          <InputGroup
-            placeholder="Instagram Page URL"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            error={errors.instagram}
-          />
         </div>
       );
     }
@@ -160,16 +138,7 @@ class CreateProfile extends Component {
                   error={errors.status}
                   info="Give us an idea of where you are at in your career"
                 />
-               
-                
-                <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
-                  onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
-                />
+
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
                   name="bio"

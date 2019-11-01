@@ -19,13 +19,10 @@ class CreateProfile extends Component {
       location: '',
       status: '',
   //    skills: '',
-      githubusername: '',
       bio: '',
       twitter: '',
       facebook: '',
-      linkedin: '',
       youtube: '',
-      instagram: '',
       errors: {}
     };
 
@@ -51,9 +48,6 @@ class CreateProfile extends Component {
       // If profile field doesnt exist, make empty string
     //  profile.website = !isEmpty(profile.website) ? profile.website : '';
       profile.location = !isEmpty(profile.location) ? profile.location : '';
-      profile.githubusername = !isEmpty(profile.githubusername)
-        ? profile.githubusername
-        : '';
       profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
       profile.social = !isEmpty(profile.social) ? profile.social : {};
       profile.twitter = !isEmpty(profile.social.twitter)
@@ -62,14 +56,8 @@ class CreateProfile extends Component {
       profile.facebook = !isEmpty(profile.social.facebook)
         ? profile.social.facebook
         : '';
-      profile.linkedin = !isEmpty(profile.social.linkedin)
-        ? profile.social.linkedin
-        : '';
       profile.youtube = !isEmpty(profile.social.youtube)
         ? profile.social.youtube
-        : '';
-      profile.instagram = !isEmpty(profile.social.instagram)
-        ? profile.social.instagram
         : '';
 
       // Set component fields state
@@ -79,13 +67,10 @@ class CreateProfile extends Component {
         location: profile.location,
         status: profile.status,
    //     skills: skillsCSV,
-        githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
         facebook: profile.facebook,
-        linkedin: profile.linkedin,
-        youtube: profile.youtube,
-        instagram: profile.instagram
+        youtube: profile.youtube
       });
     }
   }
@@ -99,13 +84,10 @@ class CreateProfile extends Component {
       location: this.state.location,
       status: this.state.status,
     //  skills: this.state.skills,
-      githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
-      linkedin: this.state.linkedin,
-      youtube: this.state.youtube,
-      instagram: this.state.instagram
+      youtube: this.state.youtube
     };
 
     this.props.createProfile(profileData, this.props.history);
@@ -141,14 +123,6 @@ class CreateProfile extends Component {
             error={errors.facebook}
           />
 
-          <InputGroup
-            placeholder="Linkedin Profile URL"
-            name="linkedin"
-            icon="fab fa-linkedin"
-            value={this.state.linkedin}
-            onChange={this.onChange}
-            error={errors.linkedin}
-          />
 
           <InputGroup
             placeholder="YouTube Channel URL"
@@ -159,14 +133,6 @@ class CreateProfile extends Component {
             error={errors.youtube}
           />
 
-          <InputGroup
-            placeholder="Instagram Page URL"
-            name="instagram"
-            icon="fab fa-instagram"
-            value={this.state.instagram}
-            onChange={this.onChange}
-            error={errors.instagram}
-          />
         </div>
       );
     }
@@ -201,7 +167,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique handle for your profile URL. Your full name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -210,7 +176,7 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Give us an idea of where you are at in your career"
+                  info="Give us an idea of where you are in your relationship"
                 />
          
                 <TextFieldGroup
@@ -219,17 +185,9 @@ class CreateProfile extends Component {
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
+                  info="City or (city & state) suggested (eg. Boston, MA)"
                 />
-             
-                <TextFieldGroup
-                  placeholder="Github Username"
-                  name="githubusername"
-                  value={this.state.githubusername}
-                  onChange={this.onChange}
-                  error={errors.githubusername}
-                  info="If you want your latest repos and a Github link, include your username"
-                />
+
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
                   name="bio"

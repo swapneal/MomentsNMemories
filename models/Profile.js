@@ -29,6 +29,9 @@ const ProfileSchema = new Schema({
       type: String
     }
   },
+  bio:{
+    type:String
+  },
   date: {
     type: Date,
     default: Date.now
