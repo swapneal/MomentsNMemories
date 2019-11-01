@@ -15,10 +15,10 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      website: '',
+  //    website: '',
       location: '',
       status: '',
-      skills: '',
+  //    skills: '',
       githubusername: '',
       bio: '',
       twitter: '',
@@ -46,10 +46,10 @@ class CreateProfile extends Component {
       const profile = nextProps.profile.profile;
 
       // Bring skills array back to CSV
-      const skillsCSV = profile.skills.join(',');
+  //    const skillsCSV = profile.skills.join(',');
 
       // If profile field doesnt exist, make empty string
-      profile.website = !isEmpty(profile.website) ? profile.website : '';
+    //  profile.website = !isEmpty(profile.website) ? profile.website : '';
       profile.location = !isEmpty(profile.location) ? profile.location : '';
       profile.githubusername = !isEmpty(profile.githubusername)
         ? profile.githubusername
@@ -75,10 +75,10 @@ class CreateProfile extends Component {
       // Set component fields state
       this.setState({
         handle: profile.handle,
-        website: profile.website,
+    //    website: profile.website,
         location: profile.location,
         status: profile.status,
-        skills: skillsCSV,
+   //     skills: skillsCSV,
         githubusername: profile.githubusername,
         bio: profile.bio,
         twitter: profile.twitter,
@@ -95,10 +95,10 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,      
-      website: this.state.website,
+  //    website: this.state.website,
       location: this.state.location,
       status: this.state.status,
-      skills: this.state.skills,
+    //  skills: this.state.skills,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
@@ -212,14 +212,7 @@ class CreateProfile extends Component {
                   error={errors.status}
                   info="Give us an idea of where you are at in your career"
                 />
-                <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Could be your own website or a company one"
-                />
+         
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -228,15 +221,7 @@ class CreateProfile extends Component {
                   error={errors.location}
                   info="City or city & state suggested (eg. Boston, MA)"
                 />
-                <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
-                  onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
-                />
+             
                 <TextFieldGroup
                   placeholder="Github Username"
                   name="githubusername"
