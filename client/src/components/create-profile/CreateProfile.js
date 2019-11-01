@@ -14,10 +14,10 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      website: '',
+ //     website: '',
       location: '',
       status: '',
-      skills: '',
+ //     skills: '',
       githubusername: '',
       bio: '',
       twitter: '',
@@ -43,10 +43,10 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      website: this.state.website,
+  //    website: this.state.website,
       location: this.state.location,
       status: this.state.status,
-      skills: this.state.skills,
+ //     skills: this.state.skills,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
       twitter: this.state.twitter,
@@ -160,31 +160,8 @@ class CreateProfile extends Component {
                   error={errors.status}
                   info="Give us an idea of where you are at in your career"
                 />
-                <TextFieldGroup
-                  placeholder="Website"
-                  name="website"
-                  value={this.state.website}
-                  onChange={this.onChange}
-                  error={errors.website}
-                  info="Could be your own website or a company one"
-                />
-                <TextFieldGroup
-                  placeholder="Location"
-                  name="location"
-                  value={this.state.location}
-                  onChange={this.onChange}
-                  error={errors.location}
-                  info="City or city & state suggested (eg. Boston, MA)"
-                />
-                <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
-                  onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP"
-                />
+               
+                
                 <TextFieldGroup
                   placeholder="Github Username"
                   name="githubusername"
