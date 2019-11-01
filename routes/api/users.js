@@ -9,6 +9,7 @@ const passport = require('passport');
 const validatePostInput = require('../../validation/post');
 const validateProfileInput = require('../../validation/profile');
 const validateRegisterInput = require('../../validation/register');
+const validateLoginInput = require('../../validation/login');
 
 //@route POST api/users/register
 //@description Registering a user

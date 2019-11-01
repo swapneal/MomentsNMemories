@@ -14,7 +14,6 @@ class CreateProfile extends Component {
     this.state = {
       displaySocialInputs: false,
       handle: '',
-      company: '',
       website: '',
       location: '',
       status: '',
@@ -44,7 +43,6 @@ class CreateProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      company: this.state.company,
       website: this.state.website,
       location: this.state.location,
       status: this.state.status,
@@ -123,15 +121,15 @@ class CreateProfile extends Component {
 
     // Select options for status
     const options = [
-      { label: '* Select Professional Status', value: 0 },
-      { label: 'Developer', value: 'Developer' },
-      { label: 'Junior Developer', value: 'Junior Developer' },
-      { label: 'Senior Developer', value: 'Senior Developer' },
-      { label: 'Manager', value: 'Manager' },
-      { label: 'Student or Learning', value: 'Student or Learning' },
-      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
-      { label: 'Intern', value: 'Intern' },
-      { label: 'Other', value: 'Other' }
+      { label: '* Select Relationship Status', value: 0 },
+      { label: 'Single', value: 'Single' },
+      { label: 'In a Relationship', value: 'In a Relationship' },
+      { label: 'Engaged', value: 'Engaged' },
+      { label: 'Married', value: 'Married' },
+      { label: 'Separated', value: 'Separated' },
+      { label: 'Widowed', value: 'Widowed' },
+      { label: 'Divorced', value: 'Divorced' },
+      { label: 'Complicated', value: 'Complicated' }
     ];
 
     return (
@@ -151,7 +149,7 @@ class CreateProfile extends Component {
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
-                  info="A unique handle for your profile URL. Your full name, company name, nickname"
+                  info="A unique handle for your profile URL. Your full name, nickname"
                 />
                 <SelectListGroup
                   placeholder="Status"
@@ -161,14 +159,6 @@ class CreateProfile extends Component {
                   options={options}
                   error={errors.status}
                   info="Give us an idea of where you are at in your career"
-                />
-                <TextFieldGroup
-                  placeholder="Company"
-                  name="company"
-                  value={this.state.company}
-                  onChange={this.onChange}
-                  error={errors.company}
-                  info="Could be your own company or one you work for"
                 />
                 <TextFieldGroup
                   placeholder="Website"
