@@ -33,15 +33,24 @@ class Dashboard extends Component {
             <p className="lead text-muted">
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
             </p>
+           
+          <div>
+              <img src="http://shorturl.at/tGH39"//{user.avatar}
+              alt={user.name}
+              style={{ width: '300px', marginRight: '5px', size: '100px' }}              
+            />
+        </div>
+            <div classname="col-md-6">
+            <div  style={{ marginBottom: '60px' }} />
             <ProfileActions />
-
-            <div style={{ marginBottom: '60px' }} />
+           <br/>
             <button
               onClick={this.onDeleteClick.bind(this)}
               className="btn btn-danger"
             >
               Delete My Account
             </button>
+            </div>            
           </div>
         );
       } else {
@@ -62,8 +71,8 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+            <div className="col-md-6">
+              <h3 className="display-4">Dashboard</h3>
               {dashboardContent}
             </div>
           </div>
