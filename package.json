@@ -25,7 +25,7 @@
     "validator": "^11.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.4"
   },
   "proxy": "http://localhost:8000"
 }
